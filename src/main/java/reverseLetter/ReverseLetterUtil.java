@@ -1,7 +1,7 @@
 package reverseLetter;
 
-public class reverse_letter {
-    public static String LetterReverser(String input) {
+public class ReverseLetterUtil {
+    public static String reverse(String input) {
         if (input == null || input.isEmpty()) {
             return input;
         }

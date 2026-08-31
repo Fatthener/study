@@ -1,9 +1,9 @@
 package reverseLetter;
 
 public class Main {
-    static void main() {
+    public static void main(String[] args) {
         String input = "J@va the be$t123!";
-        String result = reverse_letter.LetterReverser(input);
+        String result = ReverseLetterUtil.reverse(input);
         System.out.println(input);
         System.out.println(result);
     }
