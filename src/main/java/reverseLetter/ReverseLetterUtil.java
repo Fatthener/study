@@ -1,29 +1,29 @@
 package reverseLetter;
 
-public class ReverseLetterUtil {
+public final class ReverseLetterUtil {
     public static String reverse(String input) {
         if (input == null || input.isEmpty()) {
             return input;
         }
 
         char[] chars = input.toCharArray();
-        int left = 0;//проверка слево направо
-        int right = chars.length - 1;//проверка справо налево
+        int leftPointer = 0;//указатель, двигающийся налево
+        int rightPointer = chars.length - 1;//указатель, двигающийся направо
 
-        while (left < right) {
-            while (left < right && !Character.isLetter(chars[left])) {
-                left++;
+        while (leftPointer < rightPointer) {
+            while (leftPointer < rightPointer && !Character.isLetter(chars[leftPointer])) {
+                leftPointer++;
             }
-            while (left < right && !Character.isLetter(chars[right])) {
-                right--;
+            while (leftPointer < rightPointer && !Character.isLetter(chars[rightPointer])) {
+                rightPointer--;
             }
 
-            char tmp = chars[left];
-            chars[left] = chars[right];
-            chars[right] = tmp;
+            char tmp = chars[leftPointer];
+            chars[leftPointer] = chars[rightPointer];
+            chars[rightPointer] = tmp;
 
-            left++;
-            right--;
+            leftPointer++;
+            rightPointer--;
         }
 
         return new String(chars);

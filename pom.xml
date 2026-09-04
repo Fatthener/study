@@ -30,7 +30,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <!-- Указываем класс с main-методом -->
-                            <mainClass>reverseLetter.Main</mainClass>
+                            <mainClass>main.java.reverseLetter.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
